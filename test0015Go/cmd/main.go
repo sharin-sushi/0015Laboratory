@@ -29,6 +29,14 @@ func main() {
 	fmt.Printf("newListenr=%v \n", newListenr)
 }
 
+// 出力結果
+// db type=&user.ListenerDatabase{}
+// db=&{}, &{},
+// "fetch"
+// gotListener=&{1 sharin}
+// "fetch"
+// newListenr=&{0 sharin}
+
 func listenerGet(u IListener, id user.ListenerId) *user.Listener {
 	fmt.Print("\"fetch\"\n")
 	return u.GetListener(id)
